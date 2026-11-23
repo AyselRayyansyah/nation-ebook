@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive bilingual digital book about the foundations of national progress.">
+  <meta name="theme-color" content="#243b35">
+  <title>THE MAKING OF NATIONS — A Digital Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="The Making of Nations home">
+      <span class="brand-mark">MN</span><span>THE MAKING <i>OF NATIONS</i></span>
+    </a>
+    <nav class="top-actions" aria-label="Reader controls">
+      <button id="langBtn" class="text-button" type="button" aria-label="Switch language">ID / EN</button>
+      <button id="fontDown" class="icon-button" type="button" aria-label="Decrease text size">A−</button>
+      <button id="fontUp" class="icon-button" type="button" aria-label="Increase text size">A+</button>
+      <button id="themeBtn" class="icon-button" type="button" aria-label="Toggle reading theme">◐</button>
+      <button id="menuBtn" class="menu-button" type="button" aria-label="Open contents">☰</button>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-label" data-id="DAFTAR ISI" data-en="CONTENTS">DAFTAR ISI</div>
+      <div class="book-mini">
+        <div class="mini-cover"><span>THE<br>MAKING<br><em>OF NATIONS</em></span><small>A GLOBAL PERSPECTIVE</small></div>
+        <div><strong data-id="Membangun Bangsa" data-en="Building Nations">Membangun Bangsa</strong><small>Digital Edition · 2026</small></div>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-meta"><span data-id="Progres membaca" data-en="Reading progress">Progres membaca</span><b id="progressText">0%</b></div>
+        <div class="progress-track"><span id="progressBar"></span></div>
+      </div>
+      <div id="chapterNav" class="chapter-nav"></div>
+      <div class="sidebar-note">AN OPEN LEARNING PROJECT<br><span>Knowledge · People · Progress</span></div>
+    </aside>
+
+    <section class="reader">
+      <div class="reader-toolbar">
+        <span id="chapterKicker">INTRODUCTION / PENGANTAR</span>
+        <span id="chapterCount">01 / 09</span>
+      </div>
+      <article id="article" class="article" aria-live="polite"></article>
+      <div class="reader-footer">
+        <button id="prevBtn" class="nav-button secondary" type="button">← <span data-id="Sebelumnya" data-en="Previous">Sebelumnya</span></button>
+        <span id="pageStatus">01 — 09</span>
+        <button id="nextBtn" class="nav-button primary" type="button"><span data-id="Selanjutnya" data-en="Next">Selanjutnya</span> →</button>
+      </div>
+      <footer class="site-footer">THE MAKING OF NATIONS <span>·</span> A BILINGUAL DIGITAL BOOK</footer>
+    </section>
+  </main>
+
+  <script src="book.js"></script>
+</body>
+</html>
